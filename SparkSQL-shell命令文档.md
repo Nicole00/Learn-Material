@@ -25,8 +25,8 @@
 
 		CREATE TABLE IF NOT EXISTS person
 		 (
-		id string,
-            name string
+			id string,
+			name string
 		  )ROW FORMAT DELIMITED FIELDS TERMINATED BY '\u0001\t' STORED AS TEXTFILE;
 
 	（2）从其他表的操作中保存临时表
@@ -271,7 +271,7 @@
 	结果表：
 
 	    person_id name person_id1 car_id car_type
-    		1      A		1		01		type1
-    		1      A		3		02		type2
-    		2      B		1		01		type1
-    	 	2      B		3		02		type2
+    	1     A	1	01	type1
+    	1     A	3	02	type2
+    	2     B	1	01	type1
+    	2     B	3	02	type2
