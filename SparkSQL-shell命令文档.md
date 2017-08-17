@@ -27,7 +27,7 @@
 		 (
 			id string,
             name string
-		  ) stored as INPUTFORMAT 'com.hikvision.sparta.moirai.common.split.SpartaUdfInputFormat' OUTPUTFORMAT 'com.hikvision.sparta.moirai.common.split.SpartaUdfOutputFormat';
+		  )ROW FORMAT DELIMITED FIELDS TERMINATED BY '\u0001\t' STORED AS TEXTFILE;
 
 	（2）从其他表的操作中保存临时表
 
@@ -46,9 +46,9 @@
     	#path表示 你的源数据存储的位置
 
 		
-	 **例子**：往person表中导入数据，源数据存在服务器的HDFS上
+	 **例子**：往person表中导入数据，源数据存在HDFS上
 	
-	`LOAD DATA INPATH 'hdfs://master66:8020/temp/person.txt' OVERWRITE INTO TABLE person;`
+	`LOAD DATA INPATH 'hdfs://ip:port/person.txt' OVERWRITE INTO TABLE person;`
 	
 
 6. **查询数据字段：**
