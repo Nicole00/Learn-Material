@@ -2,7 +2,9 @@
 
 1. **进入SparkSQL：**
 
-    `spark-sql --master yarn --driver-cores 1 --driver-java-options "-Dspark.driver.port=4050" --conf spark.sql.warehouse.dir=hdfs://master66:8020/user/hive/warehouse`
+	在Spark 安装目录bin下执行：
+
+    `spark-sql --master yarn --driver-cores 1 --driver-java-options "-Dspark.driver.port=4050" `
 
 2. **创建数据库：**
 
