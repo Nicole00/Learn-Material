@@ -7,3 +7,9 @@
 在File ——>  project Structure  ——>  Project Settings ——> Modules中为Web增加Development Descriptors。
 
 选择Development Descriptors 模块的右边+号，对于自动识别的Path是out路径，需要修改为自己工程中的web.xml所在的路径，apply即可。
+
+![1](https://github.com/Nicole00/Learn-Material/blob/master/Solutions/1.png)
+
+![2](https://github.com/Nicole00/Learn-Material/blob/master/Solutions/2.png)
+
+![3](https://github.com/Nicole00/Learn-Material/blob/master/Solutions/3.png)
