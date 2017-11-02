@@ -1,0 +1,29 @@
+.top {
+    height: 82px;
+    background: #FFFFFF;
+}
+.top-left {
+    width: 50%;
+    height: inherit;
+    float: left;
+}
+.top-right {
+    width: 50%;
+    height: inherit;
+    float: right;
+}
+.nav-content, .main-content {
+    /*top:142px;*/
+    margin-top: 82px;
+}
+.logo{
+    margin-top: 25px;
+    margin-left: 70%;
+    /*margin-right: auto;*/
+}
+.system-name {
+    margin-top: 20px;
+    font-family: 'DejaVu Sans Mono', monospace;
+    font-size: 35px;
+    color: #4E5465;
+}
