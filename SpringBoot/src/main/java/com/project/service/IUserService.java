@@ -1,8 +1,11 @@
 package com.project.service;
 
+import com.project.model.UserEntity;
+import java.util.List;
 /**
- * Created by wuyi5 on 2017/9/6.
+ * Created by wangchangyuan on 2017/11/3.
  */
 public interface IUserService {
-    void allUsers();
+    List<UserEntity> selectUserInfo();
+    int insertUserInfo(UserEntity userEntity);
 }

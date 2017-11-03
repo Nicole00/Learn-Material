@@ -1,12 +1,11 @@
 package com.project.dao;
 
-import com.project.model.User;
-
+import com.project.model.UserEntity;
 import java.util.List;
-
 /**
- * Created by wuyi5 on 2017/9/6.
+ * Created by wangchangyuan on 2017/11/3.
  */
 public interface UserDao {
-    List<User> select();
+    List<UserEntity> selectUser();
+    int insertUser(UserEntity userEntity);
 }

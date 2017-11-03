@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.project.dao.UserDao">
+    <resultMap id="userEntity" type="com.project.model.UserEntity">
+        <!--注意这里的property对应了model里的字段名称-->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="user_name" property="user_name" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="userList">
+        id, user_name, age
+    </sql>
+
+    <select id="selectUser" resultMap="userEntity">
+        SELECT *
+        FROM user;
+    </select>
+
+    <insert id="insertUser"  parameterType="com.project.model.UserEntity">
+        INSERT INTO users(id, user_name, age)
+        VALUES (#{id, jdbcType=INTEGER}, #{user_name, jdbcType=VARCHAR}, #{age, jdbcType=INTEGER});
+    </insert>
+
+    <delete id="deleteUser" parameterType="com.project.model.UserEntity">
+        DELETE FROM user
+        WHERE id = #{id};
+    </delete>
+
+    <update id="updateUser" parameterType="com.project.model.UserEntity">
+        UPDATE user
+        SET id = #{id}, user_name = #{user_name}, age = #{age}
+        WHERE id = #{id};
+    </update>
+</mapper>
